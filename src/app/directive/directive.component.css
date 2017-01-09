@@ -1,0 +1,12 @@
+.coolBorder{
+  border: 2px dashed darkblue;
+}
+
+.coolColor{
+  background-color: darkmagenta;
+}
+
+.coolDimention{
+  width: 100px;
+  height: 100px;
+}

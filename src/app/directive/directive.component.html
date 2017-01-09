@@ -1,0 +1,43 @@
+<label>ngClass</label>
+<div [ngClass]="{coolBorder: isCoolBorder, coolColor: isCoolColor, coolDimention: isCoolDimention}"></div>
+
+<label>ngClass get params from method</label>
+<div [ngClass]="getParams()"></div>
+
+<div>
+<label>Enable/Disable color</label>
+<button (click)="isCoolColor = !isCoolColor">Color</button>
+
+<label>Enable/Disable border</label>
+<button (click)="isCoolBorder = !isCoolBorder">Border</button>
+
+<label>Enable/Disable Dimentions</label>
+<button (click)="isCoolDimention= !isCoolDimention">Color</button>
+</div>
+
+<h2> Custom Directive </h2>
+<div highlight>Custom directive</div>
+
+<h2>Custom HostListener</h2>
+<div highlight [highlightColor]="'red'" [defaultColor]="'blue'">Host Listener</div>
+
+<hr>
+<h2>Structural directive ngIf, ngFor, ngSwith</h2>
+<div *ngIf="isNgIf">ngIf</div>
+<button (click)="isNgIf = !isNgIf">Show/Hide ngIf</button>
+
+<ul>*ngFor
+  <li *ngFor="let item of items; let i = index">{{item}} and index = {{i}}</li>
+</ul>
+
+<div [ngSwitch]="isNgCase">ngSwitch
+  <div *ngSwitchCase="10">10</div>
+  <div *ngSwitchCase="20">20</div>
+  <div *ngSwitchDefault>default value</div>
+</div>
+
+<h2>Custom directive</h2>
+<div *unless="isNgIf"> My Unless directive</div>
+
+<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
