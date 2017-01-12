@@ -1,4 +1,21 @@
 <!--<h1>Directives</h1>-->
 <!--<h2>ngClass and ngStyle</h2>-->
 <!--<app-directive></app-directive>-->
-<app-serv-and-deps-inject></app-serv-and-deps-inject>
+<!--<app-serv-and-deps-inject></app-serv-and-deps-inject>-->
+
+<h1>Routes</h1>
+<div routerLinkActive="divActive" [routerLinkActiveOptions]="{exact: true}">
+  <a [routerLink]="['/']" >Home</a>
+</div>
+<a [routerLink]="['/']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+<a [routerLink]="['/']" [queryParams]="{parameter: 1222}">Home with queryParams</a>
+<a [routerLink]="['user']" routerLinkActive="active">User</a> |
+
+<label>Navigate to user certaine user with id</label>
+<input #id type="text" (input)="0">
+<a [routerLink]="['user', id.value]">User with id</a>
+
+<hr>
+<div class="border">
+<router-outlet></router-outlet>
+</div>
