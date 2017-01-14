@@ -1,6 +1,6 @@
 import {BrowserModule} from "@angular/platform-browser";
 import {NgModule} from "@angular/core";
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpModule} from "@angular/http";
 import {AppComponent} from "./app.component";
 import {OtherComponent} from "./other/other.component";
@@ -21,6 +21,8 @@ import { UserEditComponent } from './routes/user-edit.component';
 import { ErrorPageComponent } from './routes/error-page.component';
 import {UserDetailGuard} from "./routes/user.detail.guard";
 import {UserEditGuard} from "./routes/user-edit.guard";
+import {TemplateFormComponent} from "./forms/template-form/template-form.component";
+import {DataFormComponent} from "./forms/data-form/data-form.component";
 
 @NgModule({
   declarations: [
@@ -39,13 +41,16 @@ import {UserEditGuard} from "./routes/user-edit.guard";
     HomeComponent,
     UserDetailComponent,
     UserEditComponent,
-    ErrorPageComponent
+    ErrorPageComponent,
+    TemplateFormComponent,
+    DataFormComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    ROUTES
+    ROUTES,
+    ReactiveFormsModule
   ],
 
   // Если нужно чтобы сервис был синглтоном для ВСЕГО приложения
