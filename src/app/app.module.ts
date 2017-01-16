@@ -26,6 +26,8 @@ import {DataFormComponent} from "./forms/data-form/data-form.component";
 import { MyPipeComponent } from './my-pipe/my-pipe.component';
 import { DoublePipe } from './my-pipe/double.pipe';
 import { FilterPipe } from './my-pipe/filter.pipe';
+import { HttpComponent } from './http/http.component';
+import {HttpService} from "./http/http.service";
 
 @NgModule({
   declarations: [
@@ -49,7 +51,8 @@ import { FilterPipe } from './my-pipe/filter.pipe';
     DataFormComponent,
     MyPipeComponent,
     DoublePipe,
-    FilterPipe
+    FilterPipe,
+    HttpComponent
   ],
   imports: [
     BrowserModule,
@@ -61,7 +64,7 @@ import { FilterPipe } from './my-pipe/filter.pipe';
 
   // Если нужно чтобы сервис был синглтоном для ВСЕГО приложения
   // его нужно записать тут.
-  providers: [UserDetailGuard, UserEditGuard],
+  providers: [UserDetailGuard, UserEditGuard, HttpService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

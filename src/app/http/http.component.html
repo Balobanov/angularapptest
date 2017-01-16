@@ -1,0 +1,26 @@
+<h1>HTTP</h1>
+<p>using google's firebase</p>
+<h2>Get</h2>
+<p>Send GET to firebase</p>
+<button (click)="sendGET()">Send</button>
+<p>{{myData}}</p>
+
+<h2>Post</h2>
+<label for="username">Username</label>
+<input type="text" id="username" #name>
+
+<label for="email">email</label>
+<input type="text" id="email" #email>
+
+<button (click)="storeData(name.value, email.value)">Store. Send POst</button>
+<hr>
+
+<h2>Get own data</h2>
+<button (click)="getOwnData()">Get own data</button>
+<ul>
+  <li *ngFor="let user of users">{{user.username}} {{user.email}}</li>
+</ul>
+
+<h2>Async fetching data</h2>
+<p>{{asyncData | async}}</p>
+

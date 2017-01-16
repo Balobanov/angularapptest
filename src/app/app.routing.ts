@@ -6,10 +6,12 @@ import {ErrorPageComponent} from "./routes/error-page.component";
 import {TemplateFormComponent} from "./forms/template-form/template-form.component";
 import {DataFormComponent} from "./forms/data-form/data-form.component";
 import {MyPipeComponent} from "./my-pipe/my-pipe.component";
+import {HttpComponent} from "./http/http.component";
 
 const APP_ROUTES: Route[] = [
   {path: 'user', component: UserComponent},
   {path: 'pipes', component: MyPipeComponent},
+  {path: 'http', component: HttpComponent},
   {path: 'temp-form', component: TemplateFormComponent},
   {path: 'data-form', component: DataFormComponent},
   {path: 'error', component: ErrorPageComponent},
