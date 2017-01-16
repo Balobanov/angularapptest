@@ -33,7 +33,8 @@ export class HttpComponent implements OnInit {
 
   storeData(name: string, email: string){
     this.httpService.postDataToFireBase({username: name, email: email}).subscribe(
-      (data) => console.log(data)
+      (data) => console.log(data),
+      (error) => console.log(error)
     );
   }
 
