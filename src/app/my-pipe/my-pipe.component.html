@@ -1,0 +1,22 @@
+<h1>Pipes</h1>
+<h2>Angular's 2 pipes</h2>
+<p>{{value | uppercase}}</p>
+<p>{{value | uppercase | slice:2:4}}</p>
+<p>{{date | date:'d-M-y'}}</p>
+
+<h2>Custom pipe</h2>
+<h3>Double number pipe</h3>
+<p>{{num | double}}</p>
+<p>{{value | double}}</p>
+
+
+<input type="text" [(ngModel)]="inputVal">
+<p>{{inputVal | double}}</p>
+
+<h3>Filter pipe</h3>
+<input type="text" #input>
+<button (click)="strings.push(input.value)">Add to list</button>
+<p *ngFor="let str of strings | filter:'ea'">{{str}}</p>
+
+<h2>Async pipe</h2>
+<p>{{asyncVal | async}}</p>

@@ -23,6 +23,9 @@ import {UserDetailGuard} from "./routes/user.detail.guard";
 import {UserEditGuard} from "./routes/user-edit.guard";
 import {TemplateFormComponent} from "./forms/template-form/template-form.component";
 import {DataFormComponent} from "./forms/data-form/data-form.component";
+import { MyPipeComponent } from './my-pipe/my-pipe.component';
+import { DoublePipe } from './my-pipe/double.pipe';
+import { FilterPipe } from './my-pipe/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -43,7 +46,10 @@ import {DataFormComponent} from "./forms/data-form/data-form.component";
     UserEditComponent,
     ErrorPageComponent,
     TemplateFormComponent,
-    DataFormComponent
+    DataFormComponent,
+    MyPipeComponent,
+    DoublePipe,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
