@@ -28,6 +28,13 @@ import { DoublePipe } from './my-pipe/double.pipe';
 import { FilterPipe } from './my-pipe/filter.pipe';
 import { HttpComponent } from './http/http.component';
 import {HttpService} from "./http/http.service";
+import { SigninComponent } from './auth/unprotected/signin.component';
+import { SignupComponent } from './auth/unprotected/signup.component';
+import { ProtectedComponent } from './auth/protected/protected.component';
+import { HeaderComponent } from './auth/header.component';
+import {AuthService} from "./auth/auth.service";
+import { AuthContainerComponent } from './auth/auth-container.component';
+import {AuthGuard} from "./auth/auth.guard";
 
 @NgModule({
   declarations: [
@@ -52,7 +59,12 @@ import {HttpService} from "./http/http.service";
     MyPipeComponent,
     DoublePipe,
     FilterPipe,
-    HttpComponent
+    HttpComponent,
+    SigninComponent,
+    SignupComponent,
+    ProtectedComponent,
+    HeaderComponent,
+    AuthContainerComponent
   ],
   imports: [
     BrowserModule,
@@ -64,7 +76,7 @@ import {HttpService} from "./http/http.service";
 
   // Если нужно чтобы сервис был синглтоном для ВСЕГО приложения
   // его нужно записать тут.
-  providers: [UserDetailGuard, UserEditGuard, HttpService],
+  providers: [UserDetailGuard, UserEditGuard, HttpService, AuthService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

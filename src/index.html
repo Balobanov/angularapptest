@@ -7,8 +7,23 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+        integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 </head>
 <body>
   <app-root>Loading...</app-root>
+
+  <script src="https://www.gstatic.com/firebasejs/3.6.5/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyBH83QbHZAyoNT__Y7uYCR_OdRmRFLhyVI",
+      authDomain: "auth-beaba.firebaseapp.com",
+      databaseURL: "https://auth-beaba.firebaseio.com",
+      storageBucket: "auth-beaba.appspot.com",
+      messagingSenderId: "465851460854"
+    };
+    firebase.initializeApp(config);
+  </script>
 </body>
 </html>
