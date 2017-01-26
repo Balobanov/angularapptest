@@ -1,0 +1,34 @@
+<h1>Form (template-driven)</h1>
+<h2>Form 1</h2>
+<form (ngSubmit)="OnSubmit(f)" #f="ngForm">
+
+  <div ngModelGroup="userData">
+    <div>
+      <p>User Name</p>
+      <input type="text" [(ngModel)]="userData.name" id="username" name="username">
+    </div>
+
+
+    <div>
+      <p>User email</p>
+      <input type="text" [(ngModel)]="userData.email" id="email" name="email" #email="ngModel" required pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?">
+      <p *ngIf="!email.valid && f.untouched">Email is invalid</p>
+    </div>
+  </div>
+
+  <div>
+    <p>Password</p>
+    <input type="password" [(ngModel)]="userData.pass" id="password" name="password">
+  </div>
+
+  <div>
+    <label *ngFor="let r of radios">
+      <input type="radio" [(ngModel)]="userData.os" [value]="r" name="os">
+      {{r}}
+    </label>
+  </div>
+
+  <button type="submit" [disabled]="!f.valid">Submit info</button>
+</form>
+
+<p>Json: {{jsonForm}}</p>
